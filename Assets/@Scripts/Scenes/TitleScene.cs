@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class TitleScene : BaseScene
 {
     protected override bool Init()
@@ -12,5 +12,10 @@ public class TitleScene : BaseScene
         Managers.Init();
 
         return true;
+    }
+
+    public void OnClick()
+    {
+        Managers.Scene.LoadScene("LobbyScene");
     }
 }
